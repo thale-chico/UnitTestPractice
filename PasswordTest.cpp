@@ -45,10 +45,14 @@ TEST(PasswordTest, mixed_duplicate_char_password)
 TEST(PasswordTest, mixed_char_password_check)
 {
 	Password my_password;
-	EXPECT_TRUE(my_password.has_mixed_case("Aab"));
+	EXPECT_TRUE(my_password.has_mixed_case("Aabb"));
+	EXPECT_TRUE(my_password.has_mixed_case("aaBb"));
+	
 }
 TEST(PasswordTest, char_password_check)
 {
 	Password my_password;
-	EXPECT_FALSE(2, my_password.has_mixed_case("ab"));
+	EXPECT_FALSE(my_password.has_mixed_case("ab"));
+	EXPECT_FALSE(my_password.has_mixed_case("AB"));
+	EXPECT_FALSE(my_password.has_mixed_case("Ab"));
 }
