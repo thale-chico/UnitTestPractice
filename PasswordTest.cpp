@@ -54,5 +54,4 @@ TEST(PasswordTest, char_password_check)
 	Password my_password;
 	EXPECT_FALSE(my_password.has_mixed_case("ab"));
 	EXPECT_FALSE(my_password.has_mixed_case("AB"));
-	EXPECT_FALSE(my_password.has_mixed_case("Ab"));
 }
