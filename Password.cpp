@@ -26,13 +26,18 @@ int Password::count_leading_characters(string phrase){
 #include <cctype>
 bool Password::has_mixed_case(string str)
 {
-  int count_lower = 0;
-  for (int i = 0; i < str.length(); i++)
+  bool has_lower = false;
+  bool has_upper = false;
+  for (char ch : str)
   {
-    if (str[i] >= 'a' && str[i] <= 'z')
+    if (std::islower(ch))
     {
-      count_lower++;
+      has_lower = true;
+    }
+    else if (std::isupper(ch))
+    {
+      has_upper = true;
     }
   }
-  return count_lower > 0 && count_lower < str.length();
+  return has_lower && has_upper;
 }
