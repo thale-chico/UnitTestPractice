@@ -59,6 +59,6 @@ TEST(PasswordTest, char_password_check)
 TEST(PasswordTest, unique_char_check_happy_case)
 {
 	Password my_password;
-	string input = "Password#02";
+	string input = "Password#01";
 	ASSERT_EQ(10, my_password.get_unique_chars(input));
 }
