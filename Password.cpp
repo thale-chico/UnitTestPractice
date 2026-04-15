@@ -37,8 +37,31 @@ bool Password::has_mixed_case(string str)
   return count_lower > 0 && count_lower < str.length();
 }
 
-int get_unique_chars(string word) {
-  return 0;
+// x13 - get unique characters
+#include <vector>
+int Password::get_unique_chars(string word) {
+  std::vector<char> unique_chars;
+
+  // check word chars
+  for(int i = 0; i < word.len(); i++){
+    char c = word[i];
+    bool unique = true;
+    
+    // check unique chars
+    for (int j = 0; j < unique_chars.len(); j++){
+      if(c == unique_chars[i]){
+        unique = false;
+      }
+    }
+
+    // update unique chars
+    if(unique){
+      unique_chars.push_back(c);
+    }
+  }
+
+  // return 'n' characters
+  return unique_chars.len();
 }
 
 
