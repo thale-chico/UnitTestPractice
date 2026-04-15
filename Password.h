@@ -25,5 +25,9 @@ public:
   letter and at least one lower-case letter
   */
   bool has_mixed_case(string);
+
+
+  // x13 -- return the number of unique character from the string input
+  int get_unique_chars(string word);
 };
 #endif
