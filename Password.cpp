@@ -36,3 +36,10 @@ bool Password::has_mixed_case(string str)
   }
   return count_lower > 0 && count_lower < str.length();
 }
+
+int get_unique_chars(string word) {
+  return 0;
+}
+
+
+
