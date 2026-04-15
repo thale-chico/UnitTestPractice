@@ -55,3 +55,10 @@ TEST(PasswordTest, char_password_check)
 	EXPECT_FALSE(my_password.has_mixed_case("ab"));
 	EXPECT_FALSE(my_password.has_mixed_case("AB"));
 }
+// test 'get_unique_chars'
+TEST(PasswordTest, unique_char_check_happy_case)
+{
+	Password my_password;
+	string input = "Password#01";
+	ASSERT_EQ(10, my_password.get_unique_chars(input));
+}
