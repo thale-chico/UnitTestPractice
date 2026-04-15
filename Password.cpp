@@ -49,7 +49,7 @@ int Password::get_unique_chars(string word) {
     
     // check unique chars
     for (int j = 0; j < unique_chars.size(); j++){
-      if(c == unique_chars[i]){
+      if(c == unique_chars[j]){
         unique = false;
       }
     }
