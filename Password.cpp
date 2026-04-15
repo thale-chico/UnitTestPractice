@@ -43,7 +43,7 @@ int Password::get_unique_chars(string word) {
   std::vector<char> unique_chars;
 
   // check word chars
-  for(int i = 0; i < word.len(); i++){
+  for(int i = 0; i < word.length(); i++){
     char c = word[i];
     bool unique = true;
     
@@ -61,7 +61,7 @@ int Password::get_unique_chars(string word) {
   }
 
   // return 'n' characters
-  return unique_chars.len();
+  return unique_chars.size();
 }
 
 
