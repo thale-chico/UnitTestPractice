@@ -48,7 +48,7 @@ int Password::get_unique_chars(string word) {
     bool unique = true;
     
     // check unique chars
-    for (int j = 0; j < unique_chars.len(); j++){
+    for (int j = 0; j < unique_chars.size(); j++){
       if(c == unique_chars[i]){
         unique = false;
       }
