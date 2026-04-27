@@ -46,6 +46,21 @@ TEST(PasswordTest, count_leading_characters__mixed_dup_char_2)
 	ASSERT_EQ(2, my_password.count_leading_characters("aaBb"));
 }
 // test 'has_mixed_case' function
+TEST(PasswordTest, has_mixed_case__empty)
+{
+	Password my_password;
+	ASSERT_FALSE(my_password.has_mixed_case(""));
+}
+TEST(PasswordTest, has_mixed_case__number_chars)
+{
+	Password my_password;
+	ASSERT_TRUE(my_password.has_mixed_case("123"));
+}
+TEST(PasswordTest, has_mixed_case__special_chars)
+{
+	Password my_password;
+	ASSERT_TRUE(my_password.has_mixed_case("{|}"));
+}
 TEST(PasswordTest, has_mixed_case__mixed_chars_1)
 {
 	Password my_password;
